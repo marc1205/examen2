@@ -11,4 +11,6 @@ def search_by_lon(k,l,dic) :
         if lista[i] < 0 :
             raise ValueError("No existe")
         if lista[i] != type(float) :
-            
+            raise ValueError("No es de tipo float")
+
+

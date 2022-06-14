@@ -2,7 +2,7 @@
 dic ={ open("results.json", mode="rt", encoding="utf-8") }
 
 def get_name_description(k,d) :
-    for i in d :
+    for i in dic :
         if k == d[i] :
             lista = lista[i](k,d)
             return lista
