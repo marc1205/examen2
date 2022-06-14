@@ -1,12 +1,14 @@
 
 dic ={ open("results.json", mode="rt", encoding="utf-8") }
 
-def get_name_description(k,d) :
+def get_min(k,d) :
     for i in d :
-        if k == d[i] :
+        if k > d[i] :
             lista = lista[i](k,d)
             return lista
         
     for i in lista:
         if lista[i] < 0 :
-            raise ValueError("No existe")
+            raise ValueError("No hay elementos")
+
+    

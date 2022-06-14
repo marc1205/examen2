@@ -16,9 +16,17 @@ class Stop:
         return i,n,d,lt,ln
 
     def convert_to_object(self, clave, dic) :
-        for i in dic:
+        for i in clave:
             res =("Clave", i, "valor", dic[i])
-            return res
-        print(res)
+        Stop = Stop(res)
+        return Stop
+
+
+dic = open("results.json", mode="rt", encoding="utf-8")
+clave = 1080
+res = Stop.convert_to_object(clave,dic)
+
+resultado = Stop.to_sring(res)
     
+
 
